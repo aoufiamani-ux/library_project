@@ -5,7 +5,7 @@ from user import User
 lib = Library()
 
 book1 = Book(1, "Python Basics", "Guido")
-user1 = User(1, "Imene")
+user1 = User(1, "amani")
 
 lib.add_book(book1)
 lib.register_user(user1)
