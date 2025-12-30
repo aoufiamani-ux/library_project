@@ -1,0 +1,33 @@
+@startuml
+
+class Book {
+  - book_id : int
+  - title : str
+  - author : str
+  - available : bool
+}
+
+class User {
+  - user_id : int
+  - name : str
+}
+
+class Loan {
+  - loan_id : int
+  - is_active : bool
+}
+
+class Library {
+  - books : list
+  - users : list
+  - loans : list
+}
+
+Library "1" o-- "*" Book
+Library "1" o-- "*" User
+Library "1" o-- "*" Loan
+
+Loan "*" --> "1" Book
+Loan "*" --> "1" User
+
+@enduml

@@ -1,17 +1,30 @@
 from library import Library
-from book import Book
-from user import User
 
-lib = Library()
 
-book1 = Book(1, "Python Basics", "Guido")
-user1 = User(1, "amani")
+def main():
+    library = Library()
 
-lib.add_book(book1)
-lib.register_user(user1)
+    # ---- Add books ----
+    library.add_book("Python Basics", "ahmed")
+    library.add_book("Data Science", "mohamed")
 
-lib.borrow_book(1, 1)
-lib.display_state()
+    # ---- Register users ----
+    library.register_user("Imene")
+    library.register_user("amani")
 
-lib.return_book(1)
-lib.display_state()
+    # ---- Borrow books ----
+    library.borrow_book(book_id=1, user_id=1)
+    library.borrow_book(book_id=2, user_id=2)
+
+    # ---- Display status ----
+    library.display_status()
+
+    # ---- Return a book ----
+    library.return_book(book_id=1, user_id=1)
+
+    # ---- Display final status ----
+    library.display_status()
+
+
+if __name__ == "__main__":
+    main()
