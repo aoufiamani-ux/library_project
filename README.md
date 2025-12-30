@@ -24,6 +24,7 @@ library_project
 │
 ├── README.md
 └── git_commands.txt
+## justification for classes diagram :
 The system is designed using Object-Oriented Programming principles.
 The Book class represents a library resource and stores its identity and availability.
 The User class represents a library member and only contains identification information, respecting the single responsibility principle.
